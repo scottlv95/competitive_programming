@@ -10,7 +10,17 @@ typedef vector<int> vi;
 typedef pair<int, int> ii;
 typedef vector<ii> vii;
 int main() {
-     
+    int tc;
+    cin>> tc;
+    while (tc--) {
+        ll n,temp;
+        cin>>n;
+        unordered_map <int, int> freq;
+        for (int i = 0; i<n; i++) {
+            cin>> temp;
+            freq[temp]++;
+        } 
+    } 
     return 0;
 
 }
