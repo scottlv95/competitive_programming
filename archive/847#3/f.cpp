@@ -14,6 +14,21 @@ typedef vector<ii> vii;
     cin.tie(0);               \
     cout.tie(0);
 void solve() {
+    int n, c0;
+    cin>>n>>c0;
+    vi colored(n,0);
+    colored[c0] = 1;
+    vi order(n-1);
+    for (int i = 0; i<n-1;i++){
+        cin>>order[i];
+    }
+    vector<vi> adj(n);
+    for (int i=0;i<n-1;i++){
+        int a,b;
+        cin>>a>>b;
+        adj[a].push_back(b);
+        adj[b].push_back(a);
+    }
 
 }
 
@@ -27,5 +42,4 @@ int main() {
     return 0;
 
 }
-
 

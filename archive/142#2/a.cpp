@@ -13,7 +13,31 @@ typedef vector<ii> vii;
     ios ::sync_with_stdio(0); \
     cin.tie(0);               \
     cout.tie(0);
+
+
 void solve() {
+
+    int n,temp;
+
+    int count = 0 ;
+
+    cin>>n;
+
+    vi nums(n);
+
+    for (int i = 0 ;i<n;i++){
+        cin>>temp;
+        nums[i]=temp;
+        if (temp==1) {
+            count ++;
+        }
+    }
+    // sort(nums.begin(),nums.end());
+    int ret = n;
+    ret -= count/2 ;
+    cout<<ret<<'\n';
+
+
 
 }
 
@@ -27,5 +51,3 @@ int main() {
     return 0;
 
 }
-
-

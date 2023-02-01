@@ -9,16 +9,37 @@ typedef long long ll;
 typedef vector<int> vi;
 typedef pair<int, int> ii;
 typedef vector<ii> vii;
-#define FASTIO                \
-    ios ::sync_with_stdio(0); \
-    cin.tie(0);               \
-    cout.tie(0);
-void solve() {
 
+const ll MOD = 1e9+7;
+
+void solve() {
+    
+    ll n;
+    cin>>n;
+    ll sol;
+
+    if (n%3==0) {
+        sol = ((n/3)*(n+1))%MOD;
+        sol = sol * (2*n+1) %MOD;
+    }
+    else if (n%3==1) {
+        sol = (((2*n+1)/3)*n)%MOD;
+        sol = sol * (n+1) %MOD;
+    }
+    else {
+        sol = (((n+1)/3)*n)%MOD;
+        sol = (sol * (2*n+1))%MOD;
+    }
+
+    
+    sol = sol + MOD - (n*(n+1)/2)%MOD;
+    sol = sol%MOD;
+    sol*=2022;
+    sol = sol % MOD;
+    cout<<sol<<'\n';
 }
 
 int main() {
-    FASTIO
     int tc;
     cin>>tc;
     while(tc--) {

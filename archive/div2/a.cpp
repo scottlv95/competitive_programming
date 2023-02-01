@@ -9,16 +9,32 @@ typedef long long ll;
 typedef vector<int> vi;
 typedef pair<int, int> ii;
 typedef vector<ii> vii;
-#define FASTIO                \
-    ios ::sync_with_stdio(0); \
-    cin.tie(0);               \
-    cout.tie(0);
-void solve() {
 
+void solve() {
+    int n,temp;
+    cin>>n;
+    int region = 1;
+    cin>>temp;
+    bool isEven = temp%2==0;
+    for (int i = 1; i < n; i++){
+        cin>>temp;
+        if (isEven) {
+            if (temp%2==1){
+                isEven = false;
+                region++;
+            }
+        } 
+        else {
+            if (temp%2==0){
+                isEven = true;
+                region++;
+            }
+        }
+    }
+    cout<<n-region<<'\n';
 }
 
 int main() {
-    FASTIO
     int tc;
     cin>>tc;
     while(tc--) {

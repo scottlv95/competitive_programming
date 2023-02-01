@@ -14,7 +14,28 @@ typedef vector<ii> vii;
     cin.tie(0);               \
     cout.tie(0);
 void solve() {
+    ll n,s,r;
+    cin>>n>>s>>r;
+    int stolen = s-r;
+    cout<<stolen<<' ';
+    n--;
+    vi v(n,1);
+    r-=n;
+    for (int i = 0; i<n; i++){
+        if (r<=stolen-1) {
+            v[i]+=r;     
+            break;
+        }
+        else {
+            v[i]+=(stolen-1);
+            r-=(stolen-1);
+        }
+    }
 
+    for (int i = 0; i<n; i++){
+        cout<<v[i]<<' ';
+    }
+    cout<<'\n';
 }
 
 int main() {
@@ -27,5 +48,4 @@ int main() {
     return 0;
 
 }
-
 

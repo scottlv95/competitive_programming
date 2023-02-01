@@ -9,16 +9,27 @@ typedef long long ll;
 typedef vector<int> vi;
 typedef pair<int, int> ii;
 typedef vector<ii> vii;
-#define FASTIO                \
-    ios ::sync_with_stdio(0); \
-    cin.tie(0);               \
-    cout.tie(0);
-void solve() {
 
+void solve() {
+    int n, k;
+    cin>>n>>k;
+    int top = n;
+    int bot = 1;
+    for (int i = 0; i<n; i++){
+        if (i%2==0){
+            cout<<top<<' ';
+            top--;
+        }
+        else {
+            cout<<bot<<' ';
+            bot++;
+        }
+    }
+    cout<<'\n';
+   
 }
 
 int main() {
-    FASTIO
     int tc;
     cin>>tc;
     while(tc--) {

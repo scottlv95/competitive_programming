@@ -13,8 +13,22 @@ typedef vector<ii> vii;
     ios ::sync_with_stdio(0); \
     cin.tie(0);               \
     cout.tie(0);
-void solve() {
 
+const string p = "314159265358979323846264338327950288419716939937510";
+ 
+void solve() {
+    string s;
+    cin>>s;
+    int ret=0;
+    for (int i = 0; i<s.size(); i++){
+        if (s[i]==p[i]){
+            ret++;
+        }
+        else{
+            break;
+        }
+    }
+    cout<<ret<<'\n';
 }
 
 int main() {
@@ -27,5 +41,4 @@ int main() {
     return 0;
 
 }
-
 
