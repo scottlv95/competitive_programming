@@ -6,15 +6,32 @@
 using namespace std;
 
 typedef long long ll;
-typedef vector<ll> vi;
-typedef pair<ll, ll> ii;
+typedef vector<int> vi;
+typedef pair<int, int> ii;
 typedef vector<ii> vii;
 #define FASTIO                \
     ios ::sync_with_stdio(0); \
     cin.tie(0);               \
     cout.tie(0);
 void solve() {
-
+    int n;
+    cin>>n;
+    int k;
+    if (n%2==0) {
+        cout<<"NO\n";
+        return;
+    }
+    cout<<"YES\n";
+    
+    k = (3*n+3)/2;
+    for (int odd=1;odd<=n;odd+=2){
+        cout<<odd<<' '<<k-odd<<"\n";
+        k++;
+    }
+    for (int even=2;even<=n;even+=2){
+        cout<<even<<' '<<k-even<<"\n";
+        k++;
+    }
 }
 
 int main() {

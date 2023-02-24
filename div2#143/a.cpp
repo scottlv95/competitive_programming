@@ -14,7 +14,20 @@ typedef vector<ii> vii;
     cin.tie(0);               \
     cout.tie(0);
 void solve() {
-
+    int n,m;
+    cin>>n>>m;
+    string sn, sm;
+    cin>>sn>>sm;
+    reverse(sm.begin(),sm.end());
+    string c = sn+sm;
+    int ck = 0;
+    for (int i =0; i<n+m-1;i++){
+        if (c[i]==c[i+1]) {
+            ck++;
+        }
+    }
+    if (ck<=1) {cout<<"YES\n";}
+    else {cout<<"NO\n";}
 }
 
 int main() {

@@ -14,7 +14,32 @@ typedef vector<ii> vii;
     cin.tie(0);               \
     cout.tie(0);
 void solve() {
+    vi prod;
+    ll p = 1;
+    int count=0;
+    int temp;
+    int n;
+    cin>>n;
+    for (int i = 0; i<n;i++){
+        cin>>temp;
+        if (temp==2) {
+            count++;
+        }
+        prod.push_back(count);
+    }
+    if (count%2==1) {
+        cout<<"-1\n";
+        return;
+    }
+    int f = count/2;
+    for (int i = 0; i<n-1; i++){
+        if (prod[i]==f) {
+            cout<<i+1<<'\n';
+            return;
+        }
 
+    }
+    
 }
 
 int main() {

@@ -6,8 +6,8 @@
 using namespace std;
 
 typedef long long ll;
-typedef vector<int> vi;
-typedef pair<int, int> ii;
+typedef vector<ll> vi;
+typedef pair<ll, ll> ii;
 typedef vector<ii> vii;
 #define FASTIO                \
     ios ::sync_with_stdio(0); \
